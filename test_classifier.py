@@ -9,7 +9,6 @@ Original file is located at
 
 from tensorflow.keras.models import load_model
 
-categories = ['1', '2', '3', '4', '5', '6', '7', '8', '9','10']
 
 import numpy as np
 
@@ -19,23 +18,22 @@ uploaded = files.upload()
 from google.colab import files
 uploaded = files.upload()
 
-model=load_model('gender_pred2.h5')
+model=load_model('skin_cancer_conv2d.h5')
 
 import tensorflow as tf
 
-image = 'rachael_mcadams.jpg'
+image = '.jpg'
 
 import cv2
 
 def prepare(image):
   IMG_SIZE=64
-  img_array = cv2.imread('rachael_mcadams.jpg', cv2.IMREAD_COLOR)
+  img_array = cv2.imread('.jpg', cv2.IMREAD_COLOR)
   new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
   return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 
-import matplotlib.pyplot as plt
 
-y=model.predict([prepare('rachael_mcadmas.jpg')])
+y=model.predict([prepare('.jpg')])
 
 print(y)
 
