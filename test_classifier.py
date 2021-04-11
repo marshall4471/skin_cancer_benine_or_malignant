@@ -41,6 +41,6 @@ score = y[0]
 
 # Commented out IPython magic to ensure Python compatibility.
 print(
-    "This is %.2f percent chance woman and %.2f man."
+    "This is %.2f percent chance malignant and %.2f benine."
 #     %(100*(1-score),100*score)
 )
